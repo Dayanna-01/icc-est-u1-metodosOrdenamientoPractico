@@ -20,16 +20,19 @@ public class App {
                     System.out.println("Metodo Seleccion");
                     SortSelection sortSelection = new SortSelection();
                     sortSelection.sort(numeros, ordenOpt, pasos == 1);
+
                     break;
                 case 2:
                     System.out.println("Metodo Insercion");
                     SortInsertion sortInsertion =  new SortInsertion();
                     sortInsertion.sort(numeros, ordenOpt, pasos == 1);
+
                     break;
                 case 3:
                     System.out.println("Metodo Burbuja");
                     SortBubble sortBubble =  new SortBubble();
                     sortBubble.sort(numeros, ordenOpt, pasos == 1);
+                    
                     break;
                 case 4:
                     System.out.println("Saliendo...");

@@ -9,10 +9,8 @@ public class SortSelection {
     }
 
     private void sortAscendente(int[] numeros, boolean pasos){
-
     }
 
-    private void sortDescendente(int[] numeros, boolean pasos){
-        
+    private void sortDescendente(int[] numeros, boolean pasos){ 
     }
 }

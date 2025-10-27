@@ -3,6 +3,6 @@
 
 **Estudiante:** Janelly Dayanna Chacha Velez
 
-## Metodos Ordenamiento Practivo
+## Metodos Ordenamiento Practico
 
 ### Practica 1 - 27/OCT
