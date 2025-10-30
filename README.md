@@ -87,6 +87,4 @@ Con la ejecución de los tres algoritmos se logró:
 
 ## 🧭 Conclusiones
 
-- La eficiencia de cada método varía según el tipo y tamaño del arreglo procesado.  
-- Los algoritmos Burbuja, Inserción y Selección son ideales para comprender los principios fundamentales del ordenamiento, aunque no son los más eficientes para grandes volúmenes de datos.  
-- En base a las pruebas realizadas, el método de Inserción resultó más eficiente que Burbuja y Selección en la mayoría de los casos, debido a su menor número de comparaciones y movimientos.
+- La eficacia de cada método de ordenamiento depende del tipo y el tamaño del arreglo que se está procesando. Los algoritmos de burbuja, inserción y selección son perfectos para entender los principios básicos del ordenamiento; sin embargo, no son los más apropiados para gestionar grandes cantidades de datos por su complejidad. Según lo que se encontró en las pruebas, el método de Inserción tiene un rendimiento superior en la mayor parte de los casos porque necesita menos comparaciones y movimientos que los procedimientos Selección y Burbuja.
