@@ -24,6 +24,7 @@ Al finalizar, cada uno devuelve el total de cambios y comparaciones, permitiendo
 
 ### 🔹 1. Método Burbuja (SortBubble)
 ![alt text](assets/Bubble.png)
+
 **Descripción:**  
 El método Burbuja examina el arreglo comparando pares de elementos adyacentes.  
 Si los elementos están en el orden incorrecto, se intercambian.  
@@ -43,6 +44,7 @@ La versión optimizada incluye una bandera (huboCambio) que detiene el proceso s
 
 ### 🔹 2. Método de Inserción (SortInsertion)
 ![alt text](assets/Insertion.png)
+
 **Descripción:**  
 El método Inserción simula el proceso de ordenar cartas en la mano.  
 Toma cada elemento del arreglo y lo inserta en la posición correcta respecto a los elementos previos que ya están ordenados.
@@ -58,6 +60,7 @@ Toma cada elemento del arreglo y lo inserta en la posición correcta respecto a 
 
 ### 🔹 3. Método de Selección (SortSelection)
 ![alt text](assets/Selection.png)
+
 **Descripción:**  
 El algoritmo de Selección busca el elemento más pequeño (o más grande, según el orden) y lo coloca en la primera posición.  
 Luego repite el proceso con los elementos restantes hasta que la lista esté completamente ordenada.
