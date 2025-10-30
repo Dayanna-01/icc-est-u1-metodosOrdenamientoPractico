@@ -9,7 +9,7 @@ public class SortBubble {
         }
 
         System.out.println();
-        System.out.println("Método Burbuja Mejorado");
+        System.out.println("Método Burbuja");
         System.out.print("Arreglo original -> ");
         mostrar(copia);
 

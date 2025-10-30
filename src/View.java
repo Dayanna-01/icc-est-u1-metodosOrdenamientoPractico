@@ -13,7 +13,7 @@ public class View {
         System.out.println("\nSeleccione el método de ordenamiento:");
         System.out.println("1. Selección");
         System.out.println("2. Inserción");
-        System.out.println("3. Burbuja Mejorado");
+        System.out.println("3. Burbuja");
         System.out.println("4. Salir");
         System.out.print("Opción: ");
     }
