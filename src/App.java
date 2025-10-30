@@ -1,47 +1,30 @@
 public class App {
-    public static void main(String[] args) throws Exception {
-        View view = new View();
-        view.showMenu();
+    public static void main(String[] args) {
+        View vista = new View();
+        int[] numeros = {19, 24, -19, -28, 5, 30, -12, 34, -9, 52, 0, 45};
 
-        int[] numeros =  new int[]{1, 2, 3, 5, 7};
         while (true) {
-            view.showMenu();
-            int option = view.inputOption(4);
+            vista.mostrarMenu();
+            int opcion = vista.leerOpcion(4);
 
-            view.showOrderMenu();
-            int orden = view.inputOption(2);
-            boolean ordenOpt = orden == 1;
-            view.showPasosMenu();
-            int pasos = view.inputOption(2);
+            if (opcion == 4) {
+                System.out.println("Saliendo del programa...");
+                break;
+            }
 
-            switch (option) {
-                
-                case 1:
-                    System.out.println("Metodo Seleccion");
-                    SortSelection sortSelection = new SortSelection();
-                    sortSelection.sort(numeros, ordenOpt, pasos == 1);
+            boolean pasos = vista.leerPasos();
+            boolean ascendente = vista.leerOrden();
 
-                    break;
-                case 2:
-                    System.out.println("Metodo Insercion");
-                    SortInsertion sortInsertion =  new SortInsertion();
-                    sortInsertion.sort(numeros, ordenOpt, pasos == 1);
-
-                    break;
-                case 3:
-                    System.out.println("Metodo Burbuja");
-                    SortBubble sortBubble =  new SortBubble();
-                    sortBubble.sort(numeros, ordenOpt, pasos == 1);
-                    
-                    break;
-                case 4:
-                    System.out.println("Saliendo...");
-                    System.exit(option);
-                    break;
-                default:
-                    break;
+            if (opcion == 1) {
+                SortSelection s = new SortSelection();
+                s.ordenar(numeros, ascendente, pasos);
+            } else if (opcion == 2) {
+                SortInsertion s = new SortInsertion();
+                s.ordenar(numeros, ascendente, pasos);
+            } else if (opcion == 3) {
+                SortBubble s = new SortBubble();
+                s.ordenar(numeros, ascendente, pasos);
             }
         }
     }
 }
-

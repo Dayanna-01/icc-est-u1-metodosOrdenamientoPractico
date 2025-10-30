@@ -2,52 +2,61 @@ import java.util.Scanner;
 
 public class View {
 
-    //Variable global privada para el scanner
-    private final Scanner scanner;
+    private Scanner scanner;
 
-    public View(){
-        System.out.println("Metodos Ordenamiento");
+    public View() {
+        System.out.println("=== ALGORITMOS DE ORDENAMIENTO ===");
         scanner = new Scanner(System.in);
     }
 
-    public void showMenu(){
-        System.out.println("\n--Menu metodos---");
-        System.out.println("1. Selection");
-        System.out.println("2. Insertion");
-        System.out.println("3. Bubble");
+    public void mostrarMenu() {
+        System.out.println("\nSeleccione el método de ordenamiento:");
+        System.out.println("1. Selección");
+        System.out.println("2. Inserción");
+        System.out.println("3. Burbuja Mejorado");
         System.out.println("4. Salir");
-        System.out.println("Seleccione la opcion");
-
+        System.out.print("Opción: ");
     }
 
-    public int inputOption(int max){
-        int option = -1;
-        while(true){
-            if(scanner.hasNextInt()){
-                //Si ingreso un numero
-                option = scanner.nextInt();
-                if(option >= 1 && option <= max )
+    public int leerOpcion(int maximo) {
+        int opcion = -1;
+        while (true) {
+            if (scanner.hasNextInt()) {
+                opcion = scanner.nextInt();
+                if (opcion >= 1 && opcion <= maximo) {
                     break;
-            }else {
-                scanner.next();
+                }
+            } else {
+                scanner.next(); // limpiar entrada
             }
-            System.out.println("Opcion invalida, ingrese nuevamente");
+            System.out.print("Opción inválida. Intente de nuevo: ");
         }
-        return option;
+        return opcion;
     }
 
-
-    public void showOrderMenu(){
-        System.out.println("\n--Seleccion el orden---");
-        System.out.println("1. Ascendente");
-        System.out.println("2. Descendente");
-        System.out.println("Seleccione la opcion");   
+    public boolean leerPasos() {
+        System.out.print("¿Desea ver los pasos? (true/false): ");
+        while (true) {
+            if (scanner.hasNextBoolean()) {
+                return scanner.nextBoolean();
+            } else {
+                scanner.next();
+                System.out.print("Entrada inválida. Escriba true o false: ");
+            }
+        }
     }
 
-    public void showPasosMenu(){
-        System.out.println("\n--Quiere ver los pasos?---");
-        System.out.println("1. Si");
-        System.out.println("2. No");
-        System.out.println("Seleccione la opcion");   
+    public boolean leerOrden() {
+        System.out.print("¿Desea ordenar Ascendente (A) o Descendente (D)?: ");
+        while (true) {
+            String entrada = scanner.next().trim().toUpperCase();
+            if (entrada.equals("A")) {
+                return true;
+            } else if (entrada.equals("D")) {
+                return false;
+            } else {
+                System.out.print("Entrada inválida. Ingrese A o D: ");
+            }
+        }
     }
 }
